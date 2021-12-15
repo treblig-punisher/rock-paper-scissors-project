@@ -1,4 +1,10 @@
 body{
+    // backdrop-filter:  blur(40px);
+    // background-image: url("/scissors.png"), url("/paper.png"), url("/rock.png");
+    // background-repeat: round;
+    
+    // background-size: 100px;
+    // background-position: 20px 40px;
     font-size: 18px;
     box-sizing: border-box;
     padding:0;
@@ -13,11 +19,11 @@ body{
    height: 100vh;
     margin-right:auto;
     margin-left: auto;
-    background-color: aquamarine;
+    // background-color: aquamarine;
 }
 .options-container{
     margin-top: 300px;
-    background-color: aqua;
+    // background-color: aqua;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -56,5 +62,7 @@ body{
     transform: scale(1.2) rotateZ(-45deg);
     outline-width: 6px;
     outline-color: rgb(80, 112, 255);
+    background-color: rgb(23, 17, 49);
+    border-radius: 2px;
     cursor: pointer;
 }

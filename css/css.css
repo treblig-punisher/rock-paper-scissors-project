@@ -18,12 +18,10 @@ body {
   height: 100vh;
   margin-right: auto;
   margin-left: auto;
-  background-color: aquamarine;
 }
 
 .options-container {
   margin-top: 300px;
-  background-color: aqua;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,5 +70,7 @@ body {
           transform: scale(1.2) rotateZ(-45deg);
   outline-width: 6px;
   outline-color: #5070ff;
+  background-color: #171131;
+  border-radius: 2px;
   cursor: pointer;
 }
