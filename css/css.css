@@ -1,0 +1,76 @@
+body {
+  font-size: 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: aquamarine;
+}
+
+.options-container {
+  margin-top: 300px;
+  background-color: aqua;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: 1500px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.options-container div {
+  outline-style: solid;
+  outline-width: 2px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  outline-color: coral;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.options-container div img {
+  width: 200px;
+}
+
+.options-container :nth-child(3) {
+  margin-right: 0;
+}
+
+.rock:hover, .paper:hover, .scissors:hover {
+  -webkit-transform: scale(1.2) rotateZ(-45deg);
+          transform: scale(1.2) rotateZ(-45deg);
+  outline-width: 6px;
+  outline-color: #5070ff;
+  cursor: pointer;
+}
