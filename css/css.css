@@ -291,8 +291,8 @@ body {
             justify-content: space-evenly;
     margin-right: auto;
     margin-left: auto;
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
     -webkit-transition: top 0.2s ease, flex-direction 0.2s ease, -webkit- 2009flex-direction 0.2s ease;
     transition: top 0.2s ease, flex-direction 0.2s ease, -webkit- 2009flex-direction 0.2s ease;
     transition: top 0.2s ease, flex-direction 0.2s ease;
