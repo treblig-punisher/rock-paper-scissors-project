@@ -1,12 +1,19 @@
+:root {
+  --starting-options-position:400px;
+  --starting-title-position:200px;
+  --center-of-screen: 30%;
+}
+
 body {
   font-size: 18px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
-@media (min-width: 600px) and (max-width: 1080px) {
+@media (min-width: 1000px) and (max-width: 1080px) {
   .pick-choice-title {
     display: block;
     position: relative;
@@ -15,6 +22,8 @@ body {
     top: 200px;
     margin-right: auto;
     margin-left: auto;
+    -webkit-transition: top 0.2s ease;
+    transition: top 0.2s ease;
   }
   .wrapper {
     display: -webkit-box;
@@ -52,6 +61,8 @@ body {
             justify-content: space-evenly;
     margin-right: auto;
     margin-left: auto;
+    -webkit-transition: top 0.2s ease;
+    transition: top 0.2s ease;
   }
   .options-container div {
     outline-style: solid;
@@ -88,6 +99,8 @@ body {
     top: 80px;
     margin-right: auto;
     margin-left: auto;
+    -webkit-transition: top 0.2s ease;
+    transition: top 0.2s ease;
   }
   .wrapper {
     display: -webkit-box;
@@ -103,10 +116,11 @@ body {
     margin-left: auto;
   }
   .options-container {
-    margin-top: 300px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: relative;
+    top: 300px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -123,6 +137,8 @@ body {
             justify-content: space-evenly;
     margin-right: auto;
     margin-left: auto;
+    -webkit-transition: top 0.2s ease;
+    transition: top 0.2s ease;
   }
   .options-container div {
     outline-style: solid;
@@ -159,6 +175,8 @@ body {
     top: 200px;
     margin-right: auto;
     margin-left: auto;
+    -webkit-transition: top 0.2s ease;
+    transition: top 0.2s ease;
   }
   .wrapper {
     display: -webkit-box;
@@ -174,10 +192,11 @@ body {
     margin-left: auto;
   }
   .options-container {
-    margin-top: 500px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: relative;
+    top: 500px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -194,6 +213,8 @@ body {
             justify-content: space-evenly;
     margin-right: auto;
     margin-left: auto;
+    -webkit-transition: top 0.2s ease;
+    transition: top 0.2s ease;
   }
   .options-container div {
     outline-style: solid;
@@ -221,15 +242,17 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .pick-choice-title {
     display: block;
     position: relative;
     font-size: 2rem;
     font-family: sans-serif;
-    top: 80px;
+    top: 50px;
     margin-right: auto;
     margin-left: auto;
+    -webkit-transition: top 0.2s ease;
+    transition: top 0.2s ease;
   }
   .wrapper {
     display: -webkit-box;
@@ -245,14 +268,15 @@ body {
     margin-left: auto;
   }
   .options-container {
-    margin-top: 100px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: relative;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    top: 60px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -269,6 +293,10 @@ body {
     margin-left: auto;
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
+    -webkit-transition: top 0.2s ease, flex-direction 0.2s ease, -webkit- 2009flex-direction 0.2s ease;
+    transition: top 0.2s ease, flex-direction 0.2s ease, -webkit- 2009flex-direction 0.2s ease;
+    transition: top 0.2s ease, flex-direction 0.2s ease;
+    transition: top 0.2s ease, flex-direction 0.2s ease, -webkit- 2009flex-direction 0.2s ease, -ms-flex-direction 0.2s ease;
   }
   .options-container div {
     outline-style: solid;

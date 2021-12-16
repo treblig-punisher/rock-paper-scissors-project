@@ -1,17 +1,17 @@
+:root{
+    --starting-options-position:400px;
+    --starting-title-position:200px;
+    --center-of-screen: 30%;
+}
 body{
-    // backdrop-filter:  blur(40px);
-    // background-image: url("/scissors.png"), url("/paper.png"), url("/rock.png");
-    // background-repeat: round;
-    
-    // background-size: 100px;
-    // background-position: 20px 40px;
     font-size: 18px;
     box-sizing: border-box;
     padding:0;
     margin:0;
+    overflow: hidden;
 }
 
-@media (min-width: 600px) and (max-width: 1080px) {
+@media (min-width: 1000px) and (max-width: 1080px) {
     
     .pick-choice-title{
        display: block;     
@@ -21,21 +21,19 @@ body{
        top: 200px;
        margin-right: auto;
        margin-left: auto;
+       transition: top 0.2s ease;
 
     }
     .wrapper{
         display: flex;
         position: relative;
         flex-direction: column;
-        // margin-top: 10%;
         height: 100vh;
         margin-right:auto;
         margin-left: auto;
-        // background-color: aquamarine;
     }
     .options-container{
         margin-top: 400px;
-        // background-color: aqua;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -45,14 +43,9 @@ body{
         justify-content:space-evenly;
         margin-right: auto;
         margin-left: auto;
-        // transform: scale(calc(20vw *0.8));
+        transition: top 0.2s ease;
         div{
-            // margin-top: 50px;
-            // display: block;
-            // position: relative;
-            // margin-right: 40px;
-        outline-style: solid;
-            // border-style: solid;
+            outline-style: solid;
             outline-width: 2px;
             height: fit-content;
             outline-color: coral;
@@ -88,7 +81,7 @@ body{
         top: 80px;
         margin-right: auto;
         margin-left: auto;
- 
+        transition: top 0.2s ease;
      }
 
     .wrapper{
@@ -101,8 +94,10 @@ body{
 
     }
     .options-container{
-        margin-top: 300px;
+        // margin-top: 300px;
         display: flex;
+        position: relative;
+        top: 300px;
         flex-direction: row;
         align-items: center;
         width: 1500px;
@@ -110,6 +105,7 @@ body{
         justify-content:space-evenly;
         margin-right: auto;
         margin-left: auto;
+        transition: top 0.2s ease;
         
         div{
 
@@ -129,12 +125,12 @@ body{
         
         
     }
-
+    
     .rock:hover, .paper:hover, .scissors:hover{
         transform: scale(1.2) rotateZ(-45deg);
         outline-width: 6px;
-        outline-color: rgb(80, 112, 255);
-        background-color: rgb(23, 17, 49);
+        outline-color: #5070ff;
+        background-color: #171131;
         cursor: pointer;
     }
 
@@ -151,6 +147,7 @@ body{
         top: 200px;
         margin-right: auto;
         margin-left: auto;
+        transition: top 0.2s ease;
  
      }
     .wrapper{
@@ -162,8 +159,10 @@ body{
         margin-left: auto;
     }
     .options-container{
-        margin-top: 500px;
+        // margin-top: 500px;
         display: flex;
+        position: relative;
+        top: 500px;
         flex-direction: row;
         align-items: center;
         width: 1500px;
@@ -171,6 +170,7 @@ body{
         justify-content:space-evenly;
         margin-right: auto;
         margin-left: auto;
+        transition: top 0.2s ease;
         
         div{
             outline-style: solid;
@@ -204,15 +204,16 @@ body{
 
 
 //mobile
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     .pick-choice-title{
        display: block;     
        position: relative;
        font-size: 2rem;
        font-family: sans-serif;
-       top: 80px;
+       top: 50px;
        margin-right: auto;
        margin-left: auto;
+       transition: top 0.2s ease;
 
     }
 
@@ -220,34 +221,28 @@ body{
         display: flex;
         position: relative;
         flex-direction: column;
-        // margin-top: 10%;
         height: 100vh;
         margin-right:auto;
         margin-left: auto;
-        // background-color: aquamarine;
+
     }
     .options-container{
-        margin-top: 100px;
-        // background-color: aqua;
+        // margin-top: 100px;
         display: flex;
+        position: relative;
         flex-direction: column;
+        top: 60px;
         align-items: center;
         width: fit-content;
-        // padding: 0 400px;
-        // width: 1500px;
         height: fit-content;
         justify-content:space-evenly;
         margin-right: auto;
         margin-left: auto;
         transform: scale(0.8);
-        
+        transition: top 0.2s ease, flex-direction 0.2s ease;
         div{
-            // margin-top: 50px;
-            // display: block;
-            // position: relative;
-            // margin-right: 40px;
-        outline-style: solid;
-            // border-style: solid;
+
+            outline-style: solid;
             outline-width: 2px;
             height: fit-content;
             outline-color: coral;
