@@ -33,7 +33,8 @@ function pickChoice(id, className)
         break;
     }
     chosenDiv.style.position = "absolute";
-    chosenDiv.style.top = "var(--center-of-screen)";
+    // window.matchMedia("(max-width: 700px)")
+    chosenDiv.style.top = setTopPositionBasedOnDevice();
     chosenDiv.style.backgroundColor = "#171131";
     chosenDiv.style.transform = "scale(2) rotateZ(360deg)";
     chosenDiv.style.outlineColor = "#50fff6";
@@ -48,6 +49,26 @@ function pickChoice(id, className)
     startMatchTimer = setTimeout(moveTheMainMenuItems , 1000);
 }
 
+function getCurrentWindowWidth()
+{
+    return window.innerWidth;
+}
+
+function setTopPositionBasedOnDevice()
+{
+    if(parseInt(getCurrentWindowWidth()) <= 1000)
+    {
+        return "480px";
+    }
+    else if( parseInt(getCurrentWindowWidth()) >= 1080 && parseInt(getCurrentWindowWidth()) < 1920)
+    {
+        return "-70px";
+    }
+    else if(parseInt(getCurrentWindowWidth()) >= 1920)
+    {
+        return "-40px";
+    }
+}
 function setPlayerChoice(newChoice)
 {
     playerChoice = newChoice;
