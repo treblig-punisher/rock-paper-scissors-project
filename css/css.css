@@ -139,15 +139,11 @@ body {
     --top-position: 50px;
   }
   .options-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    --top-position: -80px;
+    --top-position: -140px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -161,13 +157,7 @@ body {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     gap: 60px;
-    margin-right: auto;
-    margin-left: auto;
     -webkit-transform: scale(0.5);
             transform: scale(0.5);
-    -webkit-transition: top 0.2s ease, flex-direction 0.2s ease, -webkit- 2009flex-direction 0.2s ease;
-    transition: top 0.2s ease, flex-direction 0.2s ease, -webkit- 2009flex-direction 0.2s ease;
-    transition: top 0.2s ease, flex-direction 0.2s ease;
-    transition: top 0.2s ease, flex-direction 0.2s ease, -webkit- 2009flex-direction 0.2s ease, -ms-flex-direction 0.2s ease;
   }
 }

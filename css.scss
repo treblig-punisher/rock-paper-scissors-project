@@ -135,19 +135,19 @@ body{
 
     .options-container{
         // margin-top: 100px;
-        display: flex;
-        position: relative;
+        // display: flex;
+        // position: relative;
         flex-direction: column;
-        --top-position: -80px;
+        --top-position: -140px;
         align-items: center;
         width: fit-content;
         height: fit-content;
         justify-content:space-evenly;
         gap: 60px;
-        margin-right: auto;
-        margin-left: auto;
+        // margin-right: auto;
+        // margin-left: auto;
         transform: scale(0.5);
-        transition: top 0.2s ease, flex-direction 0.2s ease;
+        // transition: top 0.2s ease, flex-direction 0.2s ease;
         // div{
 
         //     outline-style: solid;
