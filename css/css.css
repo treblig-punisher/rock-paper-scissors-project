@@ -111,12 +111,16 @@ body {
   }
 }
 
-@media (min-width: 1000px) and (max-width: 1080px) {
+@media (min-width: 1000px) and (max-width: 1079px) {
   .pick-choice-title {
-    --top-position: 200px;
+    --top-position: 100px;
   }
   .options-container {
     --top-position: 200px;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    --width: fit-content;
+    gap: 100px;
   }
 }
 
@@ -156,6 +160,7 @@ body {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    gap: 60px;
     margin-right: auto;
     margin-left: auto;
     -webkit-transform: scale(0.5);
