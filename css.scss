@@ -134,9 +134,6 @@ body{
     }
 
     .options-container{
-        // margin-top: 100px;
-        // display: flex;
-        // position: relative;
         flex-direction: column;
         --top-position: -140px;
         align-items: center;
@@ -147,23 +144,6 @@ body{
         // margin-right: auto;
         // margin-left: auto;
         transform: scale(0.5);
-        // transition: top 0.2s ease, flex-direction 0.2s ease;
-        // div{
-
-        //     outline-style: solid;
-        //     outline-width: 2px;
-        //     height: fit-content;
-        //     outline-color: coral;
-        //     img{
-        //         width: 200px;
-        //     }
-        //     transition: all 0.2s ease;
-        
-        // }
-        // :nth-child(3){
-        //     margin-right: 0;
-        // }
-        
         
     }
 
