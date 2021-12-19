@@ -11,127 +11,99 @@ body{
     overflow: hidden;
 }
 
-@media (min-width: 1000px) and (max-width: 1080px) {
+.pick-choice-title{
+    --top-position: 200px;
+    --font-size: 2rem;
     
-    .pick-choice-title{
-       display: block;     
-       position: relative;
-       font-size: 2rem;
-       font-family: sans-serif;
-       top: 200px;
-       margin-right: auto;
-       margin-left: auto;
-       transition: top 0.2s ease;
+    display: block;     
+    position: relative;
+    font-size:var(--font-size);
+    font-family: sans-serif;
+    top: var(--top-position);
+    margin-right: auto;
+    margin-left: auto;
+    transition: top 0.2s ease;
 
-    }
-    .wrapper{
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        height: 100vh;
-        margin-right:auto;
-        margin-left: auto;
-    }
-    .options-container{
-        margin-top: 400px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        flex-shrink: 1;
-        width: 1000px;
+ }
+
+ .wrapper{
+    --flex-direction: column;
+
+    display: flex;
+    position: relative;
+    flex-direction: var(--flex-direction);
+    height: 100vh;
+    margin-right:auto;
+    margin-left: auto;
+}
+
+.options-container{
+    // margin-top: 400px;
+    --top-position: 300px;
+    --width: 1000px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: var(--top-position);
+    align-items: center;
+    flex-shrink: 1;
+    width: var(--width);
+    height: fit-content;
+    justify-content:space-evenly;
+    margin-right: auto;
+    margin-left: auto;
+    transition: top 0.2s ease;
+    div{
+        outline-style: solid;
+        outline-width: 2px;
         height: fit-content;
-        justify-content:space-evenly;
-        margin-right: auto;
-        margin-left: auto;
-        transition: top 0.2s ease;
-        div{
-            outline-style: solid;
-            outline-width: 2px;
-            height: fit-content;
-            outline-color: coral;
-            img{
-                width: 200px;
-            }
-            transition: all 0.2s ease;
-        
+        outline-color: coral;
+        img{
+            width: 200px;
         }
-        :nth-child(3){
-            margin-right: 0;
-        }
-        
-        
+        transition: all 0.2s ease;
+    
     }
+    :nth-child(3){
+        margin-right: 0;
+    }
+    
+    
+}
 
+@media (min-width: 1000px)
+{
     .rock:hover, .paper:hover, .scissors:hover{
         transform: scale(1.2) rotateZ(-45deg);
         outline-width: 6px;
         outline-color: rgb(80, 112, 255);
         background-color: rgb(23, 17, 49);
-        // border-radius: 2px;
         cursor: pointer;
-    }
-
-}
-@media screen and (min-width: 1080px) {
-    .pick-choice-title{
-        display: block;     
-        position: relative;
-        font-size: 2rem;
-        font-family: sans-serif;
-        top: 80px;
-        margin-right: auto;
-        margin-left: auto;
-        transition: top 0.2s ease;
-     }
-
-    .wrapper{
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        height: 100vh;
-        margin-right:auto;
-        margin-left: auto;
-
-    }
-    .options-container{
-        // margin-top: 300px;
-        display: flex;
-        position: relative;
-        top: 300px;
-        flex-direction: row;
-        align-items: center;
-        width: 1500px;
-        height: fit-content;
-        justify-content:space-evenly;
-        margin-right: auto;
-        margin-left: auto;
-        transition: top 0.2s ease;
-        
-        div{
-
-            outline-style: solid;
-            outline-width: 2px;
-            height: fit-content;
-            outline-color: coral;
-            img{
-                width: 200px;
-            }
-            transition: all 0.2s ease;
-        
-        }
-        :nth-child(3){
-            margin-right: 0;
-        }
-        
-        
     }
     
-    .rock:hover, .paper:hover, .scissors:hover{
-        transform: scale(1.2) rotateZ(-45deg);
-        outline-width: 6px;
-        outline-color: #5070ff;
-        background-color: #171131;
-        cursor: pointer;
+}
+
+
+@media (min-width: 1080px) {
+    .pick-choice-title{      
+        --top-position: 140px;
+     }
+    .options-container{
+        --width: 1500px;     
+    
+    }
+ 
+
+}
+
+@media (min-width: 1000px) and (max-width: 1080px)
+{   
+    .pick-choice-title{      
+        --top-position: 200px;
+     }
+    .options-container
+    {
+        --top-position: 200px;  
     }
 
 }
@@ -140,63 +112,12 @@ body{
 @media (min-width: 1920px) {
     
     .pick-choice-title{
-        display: block;     
-        position: relative;
-        font-size: 3rem;
-        font-family: sans-serif;
-        top: 200px;
-        margin-right: auto;
-        margin-left: auto;
-        transition: top 0.2s ease;
- 
+        --top-position: 200px;
+        --font-size: 3rem;
      }
-    .wrapper{
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        height: 100vh;
-        margin-right:auto;
-        margin-left: auto;
-    }
+ 
     .options-container{
-        // margin-top: 500px;
-        display: flex;
-        position: relative;
-        top: 500px;
-        flex-direction: row;
-        align-items: center;
-        width: 1500px;
-        height: fit-content;
-        justify-content:space-evenly;
-        margin-right: auto;
-        margin-left: auto;
-        transition: top 0.2s ease;
-        
-        div{
-            outline-style: solid;
-            outline-width: 2px;
-            height: fit-content;
-            outline-color: coral;
-            img{
-                width: 200px;
-            }
-            transition: all 0.2s ease;
-        
-        }
-        :nth-child(3){
-            margin-right: 0;
-        }
-        
-        
-    }
-
-    .rock:hover, .paper:hover, .scissors:hover{
-        transform: scale(1.2) rotateZ(-45deg);
-        outline-width: 6px;
-        outline-color: rgb(80, 112, 255);
-        background-color: rgb(23, 17, 49);
-        // border-radius: 2px;
-        cursor: pointer;
+        --top-position: 400px;             
     }
 
 }
@@ -206,32 +127,15 @@ body{
 //mobile
 @media (max-width: 1000px) {
     .pick-choice-title{
-       display: block;     
-       position: relative;
-       font-size: 2rem;
-       font-family: sans-serif;
-       top: 50px;
-       margin-right: auto;
-       margin-left: auto;
-       transition: top 0.2s ease;
-
+        --top-position: 50px;
     }
 
-    .wrapper{
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        height: 100vh;
-        margin-right:auto;
-        margin-left: auto;
-
-    }
     .options-container{
         // margin-top: 100px;
         display: flex;
         position: relative;
         flex-direction: column;
-        top: -80px;
+        --top-position: -80px;
         align-items: center;
         width: fit-content;
         height: fit-content;
@@ -240,21 +144,21 @@ body{
         margin-left: auto;
         transform: scale(0.5);
         transition: top 0.2s ease, flex-direction 0.2s ease;
-        div{
+        // div{
 
-            outline-style: solid;
-            outline-width: 2px;
-            height: fit-content;
-            outline-color: coral;
-            img{
-                width: 200px;
-            }
-            transition: all 0.2s ease;
+        //     outline-style: solid;
+        //     outline-width: 2px;
+        //     height: fit-content;
+        //     outline-color: coral;
+        //     img{
+        //         width: 200px;
+        //     }
+        //     transition: all 0.2s ease;
         
-        }
-        :nth-child(3){
-            margin-right: 0;
-        }
+        // }
+        // :nth-child(3){
+        //     margin-right: 0;
+        // }
         
         
     }

@@ -13,73 +13,85 @@ body {
   overflow: hidden;
 }
 
-@media (min-width: 1000px) and (max-width: 1080px) {
-  .pick-choice-title {
-    display: block;
-    position: relative;
-    font-size: 2rem;
-    font-family: sans-serif;
-    top: 200px;
-    margin-right: auto;
-    margin-left: auto;
-    -webkit-transition: top 0.2s ease;
-    transition: top 0.2s ease;
-  }
-  .wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 100vh;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  .options-container {
-    margin-top: 400px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-negative: 1;
-        flex-shrink: 1;
-    width: 1000px;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    margin-right: auto;
-    margin-left: auto;
-    -webkit-transition: top 0.2s ease;
-    transition: top 0.2s ease;
-  }
-  .options-container div {
-    outline-style: solid;
-    outline-width: 2px;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    outline-color: coral;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-  }
-  .options-container div img {
-    width: 200px;
-  }
-  .options-container :nth-child(3) {
-    margin-right: 0;
-  }
+.pick-choice-title {
+  --top-position: 200px;
+  --font-size: 2rem;
+  display: block;
+  position: relative;
+  font-size: var(--font-size);
+  font-family: sans-serif;
+  top: var(--top-position);
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-transition: top 0.2s ease;
+  transition: top 0.2s ease;
+}
+
+.wrapper {
+  --flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: var(--flex-direction);
+          flex-direction: var(--flex-direction);
+  height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.options-container {
+  --top-position: 300px;
+  --width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  top: var(--top-position);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  width: var(--width);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-transition: top 0.2s ease;
+  transition: top 0.2s ease;
+}
+
+.options-container div {
+  outline-style: solid;
+  outline-width: 2px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  outline-color: coral;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.options-container div img {
+  width: 200px;
+}
+
+.options-container :nth-child(3) {
+  margin-right: 0;
+}
+
+@media (min-width: 1000px) {
   .rock:hover, .paper:hover, .scissors:hover {
     -webkit-transform: scale(1.2) rotateZ(-45deg);
             transform: scale(1.2) rotateZ(-45deg);
@@ -90,182 +102,37 @@ body {
   }
 }
 
-@media screen and (min-width: 1080px) {
+@media (min-width: 1080px) {
   .pick-choice-title {
-    display: block;
-    position: relative;
-    font-size: 2rem;
-    font-family: sans-serif;
-    top: 80px;
-    margin-right: auto;
-    margin-left: auto;
-    -webkit-transition: top 0.2s ease;
-    transition: top 0.2s ease;
-  }
-  .wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 100vh;
-    margin-right: auto;
-    margin-left: auto;
+    --top-position: 140px;
   }
   .options-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    top: 300px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 1500px;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    margin-right: auto;
-    margin-left: auto;
-    -webkit-transition: top 0.2s ease;
-    transition: top 0.2s ease;
+    --width: 1500px;
   }
-  .options-container div {
-    outline-style: solid;
-    outline-width: 2px;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    outline-color: coral;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
+}
+
+@media (min-width: 1000px) and (max-width: 1080px) {
+  .pick-choice-title {
+    --top-position: 200px;
   }
-  .options-container div img {
-    width: 200px;
-  }
-  .options-container :nth-child(3) {
-    margin-right: 0;
-  }
-  .rock:hover, .paper:hover, .scissors:hover {
-    -webkit-transform: scale(1.2) rotateZ(-45deg);
-            transform: scale(1.2) rotateZ(-45deg);
-    outline-width: 6px;
-    outline-color: #5070ff;
-    background-color: #171131;
-    cursor: pointer;
+  .options-container {
+    --top-position: 200px;
   }
 }
 
 @media (min-width: 1920px) {
   .pick-choice-title {
-    display: block;
-    position: relative;
-    font-size: 3rem;
-    font-family: sans-serif;
-    top: 200px;
-    margin-right: auto;
-    margin-left: auto;
-    -webkit-transition: top 0.2s ease;
-    transition: top 0.2s ease;
-  }
-  .wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 100vh;
-    margin-right: auto;
-    margin-left: auto;
+    --top-position: 200px;
+    --font-size: 3rem;
   }
   .options-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    top: 500px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 1500px;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    margin-right: auto;
-    margin-left: auto;
-    -webkit-transition: top 0.2s ease;
-    transition: top 0.2s ease;
-  }
-  .options-container div {
-    outline-style: solid;
-    outline-width: 2px;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    outline-color: coral;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-  }
-  .options-container div img {
-    width: 200px;
-  }
-  .options-container :nth-child(3) {
-    margin-right: 0;
-  }
-  .rock:hover, .paper:hover, .scissors:hover {
-    -webkit-transform: scale(1.2) rotateZ(-45deg);
-            transform: scale(1.2) rotateZ(-45deg);
-    outline-width: 6px;
-    outline-color: #5070ff;
-    background-color: #171131;
-    cursor: pointer;
+    --top-position: 400px;
   }
 }
 
 @media (max-width: 1000px) {
   .pick-choice-title {
-    display: block;
-    position: relative;
-    font-size: 2rem;
-    font-family: sans-serif;
-    top: 50px;
-    margin-right: auto;
-    margin-left: auto;
-    -webkit-transition: top 0.2s ease;
-    transition: top 0.2s ease;
-  }
-  .wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 100vh;
-    margin-right: auto;
-    margin-left: auto;
+    --top-position: 50px;
   }
   .options-container {
     display: -webkit-box;
@@ -276,7 +143,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    top: -80px;
+    --top-position: -80px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -297,21 +164,5 @@ body {
     transition: top 0.2s ease, flex-direction 0.2s ease, -webkit- 2009flex-direction 0.2s ease;
     transition: top 0.2s ease, flex-direction 0.2s ease;
     transition: top 0.2s ease, flex-direction 0.2s ease, -webkit- 2009flex-direction 0.2s ease, -ms-flex-direction 0.2s ease;
-  }
-  .options-container div {
-    outline-style: solid;
-    outline-width: 2px;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    outline-color: coral;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-  }
-  .options-container div img {
-    width: 200px;
-  }
-  .options-container :nth-child(3) {
-    margin-right: 0;
   }
 }
